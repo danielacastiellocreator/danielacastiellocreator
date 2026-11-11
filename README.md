@@ -1,6 +1,6 @@
 # Daniela · UGC Creator
 
-Portfolio personale realizzato con React e Vite, configurato per la pubblicazione gratuita su GitHub Pages.
+Portfolio personale realizzato con React e Vite, con sezioni separate per video e immagini, filtri per Beauty, Tech, Design e Lifestyle, switch italiano/inglese e pricing su richiesta. Configurato per la pubblicazione gratuita su GitHub Pages.
 
 ## Avvio in locale
 
@@ -37,7 +37,8 @@ Il workflow compila e pubblica automaticamente il sito a ogni push su `main`. Vi
 
 ## Personalizzazione
 
-- Modifica testi, immagini e progetti in `src/App.jsx`.
+- Modifica testi in italiano e inglese, categorie, progetti e pacchetti in `src/App.jsx`.
 - Aggiorna colori, font e layout in `src/index.css` e `src/App.css`.
-- Sostituisci `hello@example.com` e il link Instagram con i tuoi contatti.
-- Il nome e i testi di esempio sono in italiano; immagini e font vengono caricati da servizi esterni.
+- Aggiorna i collegamenti a Instagram e TikTok con i link ai tuoi profili personali.
+- Le immagini e i testi dei progetti sono anteprime dimostrative: sostituiscili con i tuoi video, copertine e case study prima della pubblicazione.
+- Immagini e font vengono caricati da servizi esterni.

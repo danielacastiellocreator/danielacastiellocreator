@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap');
 
 :root {
   font-family: var(--font-body);
@@ -11,15 +11,13 @@
 
   --font-body: 'DM Sans', sans-serif;
   --font-display: 'Playfair Display', Georgia, serif;
-  --paper: #f7f5ef;
-  --ink: #203028;
-  --muted: #73766f;
-  --line: #deddd5;
-  --coral: #e8795f;
-  --lime: #d7ed9f;
-  --sage: #e8eee1;
+  --paper: #faf9f6;
+  --ink: #302f2b;
+  --muted: #77756f;
+  --line: #e4e1da;
+  --accent: #9a7766;
+  --soft: #f2f0eb;
 
-  font-optical-sizing: auto;
   font-weight: 400;
 }
 
@@ -61,10 +59,10 @@ img {
 
 ::selection {
   color: var(--ink);
-  background: var(--lime);
+  background: #e9ded5;
 }
 
 :focus-visible {
-  outline: 2px solid var(--coral);
+  outline: 2px solid var(--accent);
   outline-offset: 4px;
 }
