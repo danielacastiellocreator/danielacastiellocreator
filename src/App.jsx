@@ -232,42 +232,90 @@ const copy = {
       Design: 'Design',
       Lifestyle: 'Lifestyle',
     },
-    demoNote: 'Anteprime di esempio · da sostituire con i tuoi contenuti.',
     formatVideo: 'Video',
     formatImages: 'Immagini',
-    aboutEyebrow: 'UN PO’ DI ME',
+    aboutEyebrow: 'Perchè scegliermi?',
     aboutTitle: 'Belle immagini,',
     aboutTitleEmphasis: 'parole vere.',
-    aboutDescription:
-      'Sono Daniela. Mi piace trovare il dettaglio che rende un prodotto parte della vita di tutti i giorni. Progetto e realizzo contenuti UGC semplici, riconoscibili e pronti per i canali social del tuo brand.',
+    aboutDescription: [
+      [
+        { text: 'Il mio percorso nasce dal ' },
+        { text: 'Design', strong: true },
+        { text: ' e si sviluppa attraverso la ' },
+        { text: 'User Experience', strong: true },
+        { text: ' e la comunicazione digitale. Dopo una laurea triennale in ' },
+        { text: 'Design e Comunicazione', strong: true },
+        { text: ' e una magistrale in ' },
+        { text: 'Digital Design', strong: true },
+        { text: ', entrambe arricchite da un percorso di specializzazione in ' },
+        { text: 'UX Design', strong: true },
+        { text: ' presso la ' },
+        { text: 'Apple Developer Academy', strong: true },
+        { text: ' di Napoli, in partnership con l\'Università Federico II e Apple, ho imparato a guardare ogni progetto dalla prospettiva dell\'utente.' },
+      ],
+      [
+        { text: 'Questo approccio è ciò che porto anche nel mondo UGC: non creo semplicemente contenuti, ma esperienze visive e comunicative pensate per catturare l\'attenzione, trasmettere il valore di un brand e creare una connessione autentica con il pubblico.' },
+        { text: '\n\nIl mio background da designer mi permette di unire creatività e strategia, con una particolare attenzione ai dettagli, alla qualità visiva e alla chiarezza del messaggio. Ogni contenuto nasce con un obiettivo preciso: ' },
+        { text: 'comunicare nel modo giusto', strong: true },
+        { text: ', ' },
+        { text: 'arrivare al pubblico e valorizzare il prodotto', strong: true },
+        { text: '.' },
+      ],
+    ],
     servicesLabel: 'Temi e contenuti',
     serviceVideo: 'Video',
     servicePhotography: 'Fotografia',
     pricingEyebrow: 'MODI DI COLLABORARE',
     pricingTitle: 'Pricing',
     pricingDescription:
-      'Ogni progetto è diverso. Raccontami la tua idea e preparerò una proposta su misura.',
+      'Ogni progetto è diverso. Raccontami la tua idea e ti preparo una proposta su misura, pensata per i tuoi contenuti, la tua voce e la tua strategia di comunicazione.',
     pricingOptions: [
       {
         title: 'Video UGC',
-        description: 'Un video verticale, ideato per raccontare il tuo prodotto.',
-        details: ['Concept e riprese', 'Montaggio e sottotitoli'],
-        subject: 'Preventivo · Video UGC',
+        description:
+          'Un video verticale pensato per raccontare il tuo prodotto in modo autentico e coinvolgente.',
+        details: [
+          'Concept + script',
+          'Riprese + montaggio',
+          'Sottotitoli',
+          '1 revisione',
+        ],
+        price: 'da €100',
+        cta: 'Scopri il servizio →',
+        subject: 'Info servizio · Video UGC',
       },
       {
         title: 'Bundle video',
-        description: 'Più video e angolazioni creative per la tua campagna.',
-        details: ['Concept coordinati', 'Varianti creative'],
-        subject: 'Preventivo · Bundle video',
+        description:
+          'Più contenuti, più angolazioni creative, per costruire una campagna completa.',
+        details: [
+          '3 video verticali',
+          'Concept + script',
+          'Varianti creative',
+          'Montaggio + sottotitoli',
+          '2 revisioni',
+        ],
+        price: 'da €270',
+        cta: 'Scopri il servizio →',
+        subject: 'Info servizio · Bundle video',
       },
       {
         title: 'Pack immagini',
-        description: 'Una selezione di scatti curati per raccontare il tuo brand.',
-        details: ['Foto prodotto e lifestyle', 'Formati per i social'],
-        subject: 'Preventivo · Pack immagini',
+        description:
+          'Una selezione di contenuti fotografici curati per raccontare il tuo prodotto e il tuo brand.',
+        details: [
+          'Foto prodotto + lifestyle',
+          '5–10 scatti editati',
+          'Formati ottimizzati per social',
+          'Utilizzabili per sito e social',
+        ],
+        price: 'da €150',
+        cta: 'Scopri il servizio →',
+        subject: 'Info servizio · Pack immagini',
       },
     ],
-    pricesOnRequest: 'Prezzi su richiesta',
+    pricingNote:
+      'Ogni progetto è diverso. I prezzi indicati sono a partire da e possono variare in base a contenuti, quantità e diritti di utilizzo. Raccontami il tuo progetto e preparerò una proposta su misura.',
     contactEyebrow: 'IL PROSSIMO PROGETTO',
     contactTitle: 'Raccontiamo',
     contactTitleEmphasis: 'il tuo brand.',
@@ -325,42 +373,88 @@ const copy = {
       Design: 'Design',
       Lifestyle: 'Lifestyle',
     },
-    demoNote: 'Sample previews · replace with your own work.',
     formatVideo: 'Video',
     formatImages: 'Photography',
     aboutEyebrow: 'A LITTLE ABOUT ME',
     aboutTitle: 'Beautiful imagery,',
     aboutTitleEmphasis: 'honest stories.',
-    aboutDescription:
-      'I’m Daniela. I love finding the detail that makes a product feel part of everyday life. I create simple, recognisable UGC content, ready for your brand’s social channels.',
+    aboutDescription: [
+      [
+        { text: 'My path began in ' },
+        { text: 'Design', strong: true },
+        { text: ', and developed through ' },
+        { text: 'User Experience', strong: true },
+        { text: ' and digital communication. After a three-year degree in ' },
+        { text: 'Design and Communication', strong: true },
+        { text: ' and a master’s in ' },
+        { text: 'Digital Design', strong: true },
+        { text: ', both enriched by a UX Design specialisation at the ' },
+        { text: 'Apple Developer Academy', strong: true },
+        { text: ' in Naples, I learned to approach every project from the user’s point of view.' },
+      ],
+      [
+        { text: 'This is the same mindset I bring to UGC: I don’t just create content, I design visual and communicative experiences that capture attention, communicate brand value and build authentic connections with the audience.' },
+        { text: '\n\nMy background as a designer allows me to combine creativity and strategy, with a strong focus on detail, visual quality and clarity of message. Every content piece has a clear purpose: ' },
+        { text: 'communicate in the right way', strong: true },
+        { text: ', ' },
+        { text: 'reach the audience and create value', strong: true },
+        { text: '.' },
+      ],
+    ],
     servicesLabel: 'Topics and formats',
     serviceVideo: 'Video',
     servicePhotography: 'Photography',
     pricingEyebrow: 'WAYS TO WORK TOGETHER',
     pricingTitle: 'Pricing',
     pricingDescription:
-      'Every project is different. Tell me about your idea and I’ll put together a tailored proposal.',
+      'Every project is different. Tell me about your idea and I’ll prepare a tailored proposal around your content, your voice and your communication strategy.',
     pricingOptions: [
       {
         title: 'UGC video',
-        description: 'A vertical video designed to tell your product story.',
-        details: ['Creative concept and filming', 'Editing and captions'],
-        subject: 'Enquiry · UGC video',
+        description:
+          'A vertical video designed to tell your product story in an authentic and engaging way.',
+        details: [
+          'Concept + script',
+          'Filming + editing',
+          'Captions',
+          '1 revision',
+        ],
+        price: 'from €100',
+        cta: 'Discover the service →',
+        subject: 'Service enquiry · UGC video',
       },
       {
         title: 'Video bundle',
-        description: 'Multiple videos and creative angles for your campaign.',
-        details: ['Coordinated concepts', 'Creative variations'],
-        subject: 'Enquiry · Video bundle',
+        description:
+          'More content and creative angles to build a complete campaign.',
+        details: [
+          '3 vertical videos',
+          'Concept + script',
+          'Creative variations',
+          'Editing + captions',
+          '2 revisions',
+        ],
+        price: 'from €270',
+        cta: 'Discover the service →',
+        subject: 'Service enquiry · Video bundle',
       },
       {
         title: 'Photography pack',
-        description: 'A curated set of images to tell your brand story.',
-        details: ['Product and lifestyle photos', 'Social-ready formats'],
-        subject: 'Enquiry · Photography pack',
+        description:
+          'A curated selection of photographs to tell your product and brand story.',
+        details: [
+          'Product + lifestyle photography',
+          '5–10 edited images',
+          'Social-ready formats',
+          'For web and social use',
+        ],
+        price: 'from €150',
+        cta: 'Discover the service →',
+        subject: 'Service enquiry · Photography pack',
       },
     ],
-    pricesOnRequest: 'Rates on request',
+    pricingNote:
+      'Every project is different. Prices are starting rates and may vary depending on content, quantity and usage rights. Tell me about your project and I’ll prepare a tailored proposal.',
     contactEyebrow: 'YOUR NEXT PROJECT',
     contactTitle: 'Let’s tell',
     contactTitleEmphasis: 'your story.',
@@ -413,6 +507,18 @@ function RichText({ segments }) {
   )
 }
 
+function RichTextParagraphs({ paragraphs }) {
+  return (
+    <div className="about-copy">
+      {paragraphs.map((paragraph, index) => (
+        <p key={index}>
+          <RichText segments={paragraph} />
+        </p>
+      ))}
+    </div>
+  )
+}
+
 function GallerySection({
   projects,
   activeCategory,
@@ -422,7 +528,6 @@ function GallerySection({
   description,
   formatLabel,
   filterLabel,
-  demoNote,
   categoryLabels,
   indexOffset = 0,
 }) {
@@ -464,7 +569,6 @@ function GallerySection({
           )
         })}
       </div>
-      <p className="portfolio-note">{demoNote}</p>
       <div className="project-grid" aria-live="polite">
         {visibleProjects.map((project, index) => (
           <article className="project-card" key={project.title[language]}>
@@ -584,7 +688,6 @@ function App() {
             description={t.videoDescription}
             formatLabel={t.formatVideo}
             filterLabel={t.filterLabel}
-            demoNote={t.demoNote}
             categoryLabels={t.categories}
           />
 
@@ -597,7 +700,6 @@ function App() {
             description={t.imageDescription}
             formatLabel={t.formatImages}
             filterLabel={t.filterLabel}
-            demoNote={t.demoNote}
             categoryLabels={t.categories}
             indexOffset={videoProjects.length}
           />
@@ -613,7 +715,9 @@ function App() {
                 <em>{t.aboutTitleEmphasis}</em>
               </h2>
               <div className="about-note">
-                <p>{t.aboutDescription}</p>
+                {Array.isArray(t.aboutDescription)
+                  ? <RichTextParagraphs paragraphs={t.aboutDescription} />
+                  : <p>{t.aboutDescription}</p>}
                 <div className="service-list" aria-label={t.servicesLabel}>
                   <span>Beauty</span>
                   <span>Tech</span>
@@ -633,7 +737,11 @@ function App() {
               <p className="eyebrow">{t.pricingEyebrow}</p>
               <h2>{t.pricingTitle}<span>.</span></h2>
             </div>
-            <p>{t.pricingDescription}</p>
+            <p>
+              {Array.isArray(t.pricingDescription)
+                ? <RichText segments={t.pricingDescription} />
+                : t.pricingDescription}
+            </p>
           </div>
 
           <div className="pricing-grid">
@@ -652,15 +760,17 @@ function App() {
                     <li key={detail}>{detail}</li>
                   ))}
                 </ul>
+                <p className="pricing-price">{option.price}</p>
                 <a
                   className="pricing-link"
                   href={`mailto:${emailAddress}?subject=${encodeURIComponent(option.subject)}`}
                 >
-                  {t.pricesOnRequest} <span aria-hidden="true">↗</span>
+                  {option.cta}
                 </a>
               </article>
             ))}
           </div>
+          <p className="pricing-note">{t.pricingNote}</p>
         </section>
 
         <section className="contact-section section-wrap" id="contact">
