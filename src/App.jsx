@@ -3,6 +3,21 @@ import './App.css'
 
 const categories = ['All', 'Beauty', 'Tech', 'Design', 'Lifestyle']
 const emailAddress = 'danielacastiello.creator@gmail.com'
+const trustedBrands = [
+  { name: 'Rare Beauty', logo: '/images/rare-beauty.png' },
+  // Replace placeholders with { name, logo } as brand logos arrive.
+  { name: 'Logo 02', placeholder: true },
+  { name: 'Logo 03', placeholder: true },
+  { name: 'Logo 04', placeholder: true },
+  { name: 'Logo 05', placeholder: true },
+  { name: 'Logo 06', placeholder: true },
+  { name: 'Logo 07', placeholder: true },
+  { name: 'Logo 08', placeholder: true },
+  { name: 'Logo 09', placeholder: true },
+  { name: 'Logo 10', placeholder: true },
+]
+// Add reviews as { quote: { it, en }, author, role: { it, en }, brand }.
+const clientReviews = []
 
 const videoProjects = [
   {
@@ -38,150 +53,37 @@ const videoProjects = [
       en: 'Smartphone and tech accessories on a desk',
     },
   },
-  {
-    category: 'Tech',
-    title: { it: 'Una funzione che semplifica', en: 'A feature that makes life easier' },
-    type: { it: 'Tutorial · App', en: 'Tutorial · App' },
-    image:
-      'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=900&q=85',
-    alt: {
-      it: 'Smartphone con applicazioni sullo schermo',
-      en: 'Smartphone displaying apps on screen',
-    },
-  },
-  {
-    category: 'Design',
-    title: { it: 'Il piacere dei dettagli', en: 'The beauty of details' },
-    type: { it: 'Storia di prodotto · Design', en: 'Product story · Design' },
-    image:
-      'https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?auto=format&fit=crop&w=900&q=85',
-    alt: {
-      it: 'Oggetti di design e una pianta su un tavolo',
-      en: 'Design objects and a plant on a table',
-    },
-  },
-  {
-    category: 'Design',
-    title: { it: 'Un angolo da riscoprire', en: 'A corner to rediscover' },
-    type: { it: 'Home styling · Design', en: 'Home styling · Design' },
-    image:
-      'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=900&q=85',
-    alt: {
-      it: 'Interno accogliente arredato con colori naturali',
-      en: 'Cosy interior styled in natural colours',
-    },
-  },
-  {
-    category: 'Lifestyle',
-    title: { it: 'Piccole pause, ogni giorno', en: 'Little moments, every day' },
-    type: { it: 'Storytelling · Quotidianità', en: 'Storytelling · Everyday life' },
-    image:
-      'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=85',
-    alt: {
-      it: 'Caffè e tazza su un tavolo luminoso',
-      en: 'Coffee and a cup on a sunlit table',
-    },
-  },
-  {
-    category: 'Lifestyle',
-    title: { it: 'Un momento tutto per me', en: 'A moment just for me' },
-    type: { it: 'Daily routine · Lifestyle', en: 'Daily routine · Lifestyle' },
-    image:
-      'https://images.unsplash.com/photo-1499209974431-9dddcece7f88?auto=format&fit=crop&w=900&q=85',
-    alt: {
-      it: 'Momento di relax in un ambiente luminoso',
-      en: 'A relaxing moment in a bright space',
-    },
-  },
 ]
 
 const imageProjects = [
   {
     category: 'Beauty',
-    title: { it: 'Essenziale, ogni giorno', en: 'Everyday essentials' },
+    title: { it: 'Texture e luce', en: 'Texture and light' },
     type: { it: 'Fotografia prodotto · Beauty', en: 'Product photography · Beauty' },
-    image:
-      'https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?auto=format&fit=crop&w=900&q=85',
+    image: '/images/beauty-serum-texture.jpeg',
     alt: {
-      it: 'Prodotti beauty in una composizione luminosa',
-      en: 'Beauty products in a bright composition',
+      it: 'Siero alla vitamina C con la sua texture applicata sulla mano',
+      en: 'Vitamin C serum with its texture swatched on a hand',
     },
   },
   {
     category: 'Beauty',
-    title: { it: 'Un momento per me', en: 'A moment for myself' },
+    title: { it: 'La routine skincare', en: 'The skincare routine' },
     type: { it: 'Lifestyle · Skincare', en: 'Lifestyle · Skincare' },
-    image:
-      'https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=900&q=85',
+    image: '/images/beauty-skincare-routine.jpeg',
     alt: {
-      it: 'Selezione di prodotti skincare e make-up',
-      en: 'Selection of skincare and make-up products',
+      it: 'Prodotti skincare e accessori beauty su una pochette rosa',
+      en: 'Skincare products and beauty accessories on a pink pouch',
     },
   },
   {
-    category: 'Tech',
-    title: { it: 'Forma e funzione', en: 'Form and function' },
-    type: { it: 'Fotografia prodotto · Tech', en: 'Product photography · Tech' },
-    image:
-      'https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=900&q=85',
+    category: 'Beauty',
+    title: { it: 'Un tocco di luce', en: 'A touch of glow' },
+    type: { it: 'Fotografia prodotto · Beauty', en: 'Product photography · Beauty' },
+    image: '/images/beauty-rare-beauty-glow.jpeg',
     alt: {
-      it: 'Orologio dal design essenziale fotografato da vicino',
-      en: 'Close-up of a minimal watch design',
-    },
-  },
-  {
-    category: 'Tech',
-    title: { it: 'Sulla mia scrivania', en: 'On my desk' },
-    type: { it: 'Lifestyle · Tech', en: 'Lifestyle · Tech' },
-    image:
-      'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=900&q=85',
-    alt: {
-      it: 'Computer portatile su una scrivania luminosa',
-      en: 'Laptop on a bright desk',
-    },
-  },
-  {
-    category: 'Design',
-    title: { it: 'Luce, linee, materiali', en: 'Light, lines, materials' },
-    type: { it: 'Interni · Design', en: 'Interior · Design' },
-    image:
-      'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=85',
-    alt: {
-      it: 'Soggiorno contemporaneo dalle tonalità neutre',
-      en: 'Contemporary living room in neutral tones',
-    },
-  },
-  {
-    category: 'Design',
-    title: { it: 'Oggetti con carattere', en: 'Objects with character' },
-    type: { it: 'Fotografia prodotto · Design', en: 'Product photography · Design' },
-    image:
-      'https://images.unsplash.com/photo-1490312278390-ab64016e0aa9?auto=format&fit=crop&w=900&q=85',
-    alt: {
-      it: 'Complementi di arredo dal design essenziale',
-      en: 'Minimalist home accessories',
-    },
-  },
-  {
-    category: 'Lifestyle',
-    title: { it: 'Piccoli piaceri', en: 'Little pleasures' },
-    type: { it: 'Lifestyle · Quotidianità', en: 'Lifestyle · Everyday life' },
-    image:
-      'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=85',
-    alt: {
-      it: 'Tazze di caffè fotografate dall’alto',
-      en: 'Coffee cups photographed from above',
-    },
-  },
-  {
-    category: 'Lifestyle',
-    title: { it: 'Il bello di sentirsi a casa', en: 'The comfort of home' },
-    type: { it: 'Casa · Lifestyle', en: 'Home · Lifestyle' },
-    image:
-      'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=900&q=85',
-    alt: {
-      it: 'Interno accogliente arredato con colori naturali',
-      en: 'Cosy interior styled in natural colours',
+      it: 'Prodotti illuminanti Rare Beauty disposti su un tessuto dorato',
+      en: 'Rare Beauty highlighter products arranged on golden fabric',
     },
   },
 ]
@@ -195,9 +97,9 @@ const copy = {
     contact: 'Contatti',
     language: 'Lingua',
     homeLabel: 'Daniela, torna all’inizio',
-    heroEyebrow: 'UGC CREATOR · ITALIA',
-    heroTitle: 'Ciao, sono Daniela.',
-    heroTitleEmphasis: 'Design, UX e storytelling.',
+    heroGreeting: 'Ciao, sono',
+    heroName: 'Daniela.',
+    heroSubtitle: 'UGC CREATOR | Napoli, Italia',
     heroDescription: [
       { text: 'Sono ' },
       { text: 'laureata in Design', strong: true },
@@ -232,8 +134,11 @@ const copy = {
       Design: 'Design',
       Lifestyle: 'Lifestyle',
     },
-    formatVideo: 'Video',
-    formatImages: 'Immagini',
+    trustedEyebrow: 'BRAND E COLLABORAZIONI',
+    trustedTitle: 'Trusted by',
+    logoPlaceholder: 'Segnaposto',
+    reviewsEyebrow: 'PARLANO LE PERSONE',
+    reviewsTitle: 'Reviews',
     aboutEyebrow: 'Perchè scegliermi?',
     aboutTitle: 'Belle immagini,',
     aboutTitleEmphasis: 'parole vere.',
@@ -262,9 +167,6 @@ const copy = {
         { text: '.' },
       ],
     ],
-    servicesLabel: 'Temi e contenuti',
-    serviceVideo: 'Video',
-    servicePhotography: 'Fotografia',
     pricingEyebrow: 'MODI DI COLLABORARE',
     pricingTitle: 'Pricing',
     pricingDescription:
@@ -275,14 +177,14 @@ const copy = {
         description:
           'Un video verticale pensato per raccontare il tuo prodotto in modo autentico e coinvolgente.',
         details: [
-          'Concept + script',
+          '1 concept creativo',
+          'Script',
+          '1 hook + 1 CTA',
           'Riprese + montaggio',
-          'Sottotitoli',
+          'Sottotitoli + B-roll',
           '1 revisione',
         ],
-        price: 'da €100',
-        cta: 'Scopri il servizio →',
-        subject: 'Info servizio · Video UGC',
+        price: 'da €150',
       },
       {
         title: 'Bundle video',
@@ -290,28 +192,27 @@ const copy = {
           'Più contenuti, più angolazioni creative, per costruire una campagna completa.',
         details: [
           '3 video verticali',
-          'Concept + script',
-          'Varianti creative',
-          'Montaggio + sottotitoli',
-          '2 revisioni',
+          '3 concept/angolazioni creative',
+          '1 hook per video',
+          'Script',
+          'Riprese + montaggio',
+          'Sottotitoli + B-roll',
+          '1 revisione per video',
         ],
-        price: 'da €270',
-        cta: 'Scopri il servizio →',
-        subject: 'Info servizio · Bundle video',
+        price: 'da €350',
       },
       {
-        title: 'Pack immagini',
+        title: 'Immagini',
         description:
           'Una selezione di contenuti fotografici curati per raccontare il tuo prodotto e il tuo brand.',
         details: [
           'Foto prodotto + lifestyle',
-          '5–10 scatti editati',
-          'Formati ottimizzati per social',
-          'Utilizzabili per sito e social',
+          'Scatto + editing',
+          'Formato ottimizzato per social',
+          'Utilizzabile per sito e social',
         ],
-        price: 'da €150',
-        cta: 'Scopri il servizio →',
-        subject: 'Info servizio · Pack immagini',
+        price: 'da €30',
+        priceDetails: '1 immagine €30 · 3 immagini €75 · 5 immagini €110',
       },
     ],
     pricingNote:
@@ -325,7 +226,7 @@ const copy = {
     instagram: 'Instagram',
     tiktok: 'TikTok',
     emailLabel: 'Scrivi a Daniela',
-    footerText: 'Creator indipendente · Italia',
+    footerText: 'DANIELA CASTIELLO · Italia',
     footerSocialLabel: 'Contatti social',
   },
   en: {
@@ -336,9 +237,9 @@ const copy = {
     contact: 'Contact',
     language: 'Language',
     homeLabel: 'Daniela, back to top',
-    heroEyebrow: 'UGC CREATOR · ITALY',
-    heroTitle: 'Hi, I’m Daniela.',
-    heroTitleEmphasis: 'Design, UX & storytelling.',
+    heroGreeting: 'Hi, I’m',
+    heroName: 'Daniela.',
+    heroSubtitle: 'UGC CREATOR | Naples, Italy',
     heroDescription: [
       { text: 'I have a ' },
       { text: 'degree in Design', strong: true },
@@ -373,8 +274,11 @@ const copy = {
       Design: 'Design',
       Lifestyle: 'Lifestyle',
     },
-    formatVideo: 'Video',
-    formatImages: 'Photography',
+    trustedEyebrow: 'BRANDS & COLLABORATIONS',
+    trustedTitle: 'Trusted by',
+    logoPlaceholder: 'Placeholder',
+    reviewsEyebrow: 'KIND WORDS',
+    reviewsTitle: 'Reviews',
     aboutEyebrow: 'A LITTLE ABOUT ME',
     aboutTitle: 'Beautiful imagery,',
     aboutTitleEmphasis: 'honest stories.',
@@ -401,9 +305,6 @@ const copy = {
         { text: '.' },
       ],
     ],
-    servicesLabel: 'Topics and formats',
-    serviceVideo: 'Video',
-    servicePhotography: 'Photography',
     pricingEyebrow: 'WAYS TO WORK TOGETHER',
     pricingTitle: 'Pricing',
     pricingDescription:
@@ -414,14 +315,14 @@ const copy = {
         description:
           'A vertical video designed to tell your product story in an authentic and engaging way.',
         details: [
-          'Concept + script',
+          '1 creative concept',
+          'Script',
+          '1 hook + 1 CTA',
           'Filming + editing',
-          'Captions',
+          'Captions + B-roll',
           '1 revision',
         ],
-        price: 'from €100',
-        cta: 'Discover the service →',
-        subject: 'Service enquiry · UGC video',
+        price: 'from €150',
       },
       {
         title: 'Video bundle',
@@ -429,28 +330,27 @@ const copy = {
           'More content and creative angles to build a complete campaign.',
         details: [
           '3 vertical videos',
-          'Concept + script',
-          'Creative variations',
-          'Editing + captions',
-          '2 revisions',
+          '3 creative concepts/angles',
+          '1 hook per video',
+          'Script',
+          'Filming + editing',
+          'Captions + B-roll',
+          '1 revision per video',
         ],
-        price: 'from €270',
-        cta: 'Discover the service →',
-        subject: 'Service enquiry · Video bundle',
+        price: 'from €350',
       },
       {
-        title: 'Photography pack',
+        title: 'Images',
         description:
           'A curated selection of photographs to tell your product and brand story.',
         details: [
           'Product + lifestyle photography',
-          '5–10 edited images',
-          'Social-ready formats',
+          'Shoot + editing',
+          'Social-ready format',
           'For web and social use',
         ],
-        price: 'from €150',
-        cta: 'Discover the service →',
-        subject: 'Service enquiry · Photography pack',
+        price: 'from €30',
+        priceDetails: '1 image €30 · 3 images €75 · 5 images €110',
       },
     ],
     pricingNote:
@@ -464,7 +364,7 @@ const copy = {
     instagram: 'Instagram',
     tiktok: 'TikTok',
     emailLabel: 'Email Daniela',
-    footerText: 'Independent creator · Italy',
+    footerText: 'DANIELA CASTIELLO · Italy',
     footerSocialLabel: 'Social links',
   },
 }
@@ -526,11 +426,14 @@ function GallerySection({
   language,
   title,
   description,
-  formatLabel,
   filterLabel,
   categoryLabels,
-  indexOffset = 0,
 }) {
+  const visibleCategories = categories.filter(
+    (category) =>
+      category === 'All' ||
+      projects.some((project) => project.category === category),
+  )
   const visibleProjects =
     activeCategory === 'All'
       ? projects
@@ -543,34 +446,22 @@ function GallerySection({
           <h3>{title}</h3>
           <p>{description}</p>
         </div>
-        <span className="gallery-count">
-          {String(visibleProjects.length).padStart(2, '0')}
-        </span>
       </div>
       <div className="category-tabs" role="group" aria-label={filterLabel}>
-        {categories.map((category) => {
-          const count =
-            category === 'All'
-              ? projects.length
-              : projects.filter((project) => project.category === category)
-                  .length
-
-          return (
-            <button
-              className="category-tab"
-              key={category}
-              type="button"
-              aria-pressed={activeCategory === category}
-              onClick={() => setActiveCategory(category)}
-            >
-              {categoryLabels[category]}
-              <span>{count}</span>
-            </button>
-          )
-        })}
+        {visibleCategories.map((category) => (
+          <button
+            className="category-tab"
+            key={category}
+            type="button"
+            aria-pressed={activeCategory === category}
+            onClick={() => setActiveCategory(category)}
+          >
+            {categoryLabels[category]}
+          </button>
+        ))}
       </div>
       <div className="project-grid" aria-live="polite">
-        {visibleProjects.map((project, index) => (
+        {visibleProjects.map((project) => (
           <article className="project-card" key={project.title[language]}>
             <div className="project-image">
               <img
@@ -578,18 +469,13 @@ function GallerySection({
                 alt={project.alt[language]}
                 loading="lazy"
               />
-              <span className="project-number">
-                {String(indexOffset + index + 1).padStart(2, '0')}
-              </span>
               <span className="project-category">{categoryLabels[project.category]}</span>
-              <span className="project-format">{formatLabel}</span>
             </div>
             <div className="project-meta">
               <div>
                 <p className="eyebrow">{project.type[language]}</p>
                 <h4>{project.title[language]}</h4>
               </div>
-              <span className="project-arrow" aria-hidden="true">↗</span>
             </div>
           </article>
         ))}
@@ -646,11 +532,10 @@ function App() {
       <main>
         <section className="hero section-wrap" id="home">
           <div className="hero-copy">
-            <p className="eyebrow">{t.heroEyebrow}</p>
             <h1>
-              {t.heroTitle}
+              {t.heroGreeting} <span className="hero-name">{t.heroName}</span>
               <br />
-              <em>{t.heroTitleEmphasis}</em>
+              <span className="hero-subtitle">{t.heroSubtitle}</span>
             </h1>
             <p className="hero-description">
               <RichText segments={t.heroDescription} />
@@ -662,7 +547,7 @@ function App() {
 
           <div className="hero-visual">
             <img
-              src="/images/daniela-castiello.jpg"
+              src="/images/daniela-castiello-cutout.png"
               alt={t.portraitAlt}
               fetchPriority="high"
             />
@@ -686,7 +571,6 @@ function App() {
             language={language}
             title={t.videoTitle}
             description={t.videoDescription}
-            formatLabel={t.formatVideo}
             filterLabel={t.filterLabel}
             categoryLabels={t.categories}
           />
@@ -698,11 +582,36 @@ function App() {
             language={language}
             title={t.imageTitle}
             description={t.imageDescription}
-            formatLabel={t.formatImages}
             filterLabel={t.filterLabel}
             categoryLabels={t.categories}
-            indexOffset={videoProjects.length}
           />
+        </section>
+
+        <section className="trusted-section section-wrap" aria-labelledby="trusted-title">
+          <div className="trusted-heading">
+            <div>
+              <p className="eyebrow">{t.trustedEyebrow}</p>
+              <h2 id="trusted-title">{t.trustedTitle}<span>.</span></h2>
+            </div>
+          </div>
+          {trustedBrands.length > 0 && (
+            <ul className="brand-list">
+              {trustedBrands.map((brand) => (
+                <li
+                  className={brand.placeholder ? 'brand-placeholder' : ''}
+                  key={brand.name}
+                >
+                  {brand.logo ? (
+                    <img src={brand.logo} alt={brand.name} loading="lazy" />
+                  ) : (
+                    <span aria-label={`${t.logoPlaceholder} ${brand.name}`}>
+                      {brand.name}
+                    </span>
+                  )}
+                </li>
+              ))}
+            </ul>
+          )}
         </section>
 
         <section className="about-section" id="about">
@@ -718,18 +627,30 @@ function App() {
                 {Array.isArray(t.aboutDescription)
                   ? <RichTextParagraphs paragraphs={t.aboutDescription} />
                   : <p>{t.aboutDescription}</p>}
-                <div className="service-list" aria-label={t.servicesLabel}>
-                  <span>Beauty</span>
-                  <span>Tech</span>
-                  <span>Design</span>
-                  <span>Lifestyle</span>
-                  <span>{t.serviceVideo}</span>
-                  <span>{t.servicePhotography}</span>
-                </div>
               </div>
             </div>
           </div>
         </section>
+
+        {clientReviews.length > 0 && (
+          <section className="reviews-section section-wrap" aria-labelledby="reviews-title">
+            <div className="reviews-heading">
+              <p className="eyebrow">{t.reviewsEyebrow}</p>
+              <h2 id="reviews-title">{t.reviewsTitle}<span>.</span></h2>
+            </div>
+            <div className="reviews-grid">
+              {clientReviews.map((review) => (
+                <figure className="review-card" key={`${review.author}-${review.brand}`}>
+                  <blockquote>“{review.quote[language]}”</blockquote>
+                  <figcaption>
+                    <strong>{review.author}</strong>
+                    <span>{review.role[language]} · {review.brand}</span>
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+          </section>
+        )}
 
         <section className="pricing-section section-wrap" id="pricing">
           <div className="section-heading">
@@ -747,7 +668,7 @@ function App() {
           <div className="pricing-grid">
             {t.pricingOptions.map((option, index) => (
               <article
-                className={`pricing-card${index === 1 ? ' pricing-card--featured' : ''}`}
+                className="pricing-card"
                 key={option.title}
               >
                 <p className="pricing-number">
@@ -761,12 +682,11 @@ function App() {
                   ))}
                 </ul>
                 <p className="pricing-price">{option.price}</p>
-                <a
-                  className="pricing-link"
-                  href={`mailto:${emailAddress}?subject=${encodeURIComponent(option.subject)}`}
-                >
-                  {option.cta}
-                </a>
+                {option.priceDetails && (
+                  <p className="pricing-price-details">
+                    <strong>{option.priceDetails}</strong>
+                  </p>
+                )}
               </article>
             ))}
           </div>
@@ -794,7 +714,7 @@ function App() {
               <div className="social-links" aria-label={t.socialLabel}>
                 <a
                   className="social-link"
-                  href="https://www.instagram.com/"
+                  href="https://www.instagram.com/danielacastiello_/"
                   target="_blank"
                   rel="noreferrer"
                   aria-label="Instagram"
@@ -805,7 +725,7 @@ function App() {
                 </a>
                 <a
                   className="social-link"
-                  href="https://www.tiktok.com/"
+                  href="https://www.tiktok.com/@danielacastiello_"
                   target="_blank"
                   rel="noreferrer"
                   aria-label="TikTok"
@@ -827,7 +747,7 @@ function App() {
         <p>{t.footerText} · © {new Date().getFullYear()}</p>
         <div className="footer-socials" aria-label={t.footerSocialLabel}>
           <a
-            href="https://www.instagram.com/"
+            href="https://www.instagram.com/danielacastiello_/"
             target="_blank"
             rel="noreferrer"
             aria-label="Instagram"
@@ -835,7 +755,7 @@ function App() {
             <SocialIcon name="Instagram" />
           </a>
           <a
-            href="https://www.tiktok.com/"
+            href="https://www.tiktok.com/@danielacastiello_"
             target="_blank"
             rel="noreferrer"
             aria-label="TikTok"
